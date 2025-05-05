@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
-import About from "./components/About";
+// import About from "./components/About";
 import TextForm from "./components/Textform";
 import Alert from "./components/Alert";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+// import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 function App() {
   const [mode, setMode] = useState("light"); // whether dark mode is enabled or not
   const [alert, setAlert] = useState(null);
@@ -34,32 +34,32 @@ function App() {
   };
   return (
     <>
-      <Router>
-        <Navbar
-          title="TextUtiles"
-          aboutText="About"
-          mode={mode}
-          toggleMode={toggleMode}
-        />
-        <Alert alert={alert} />
+      {/* <Router> */}
+      <Navbar
+        title="TextUtiles"
+        aboutText="About"
+        mode={mode}
+        toggleMode={toggleMode}
+      />
+      <Alert alert={alert} />
 
-        <div className="container my-3">
-          <Routes>
+      <div className="container my-3">
+        {/* <Routes>
             <Route exact path="/about" element={<About mode={mode} />} />
             <Route
               exact
               path="/"
-              element={
-                <TextForm
-                  showAlert={showAlert}
-                  heading="TextUtils - Word Counter, Character Counter, Remove Extra Spaces"
-                  mode={mode}
-                />
-              }
-            />
-          </Routes>
-        </div>
-      </Router>
+              element={ */}
+        <TextForm
+          showAlert={showAlert}
+          heading="TextUtils - Words - Characters Counter and Your Aanalyzer"
+          mode={mode}
+        />
+        {/* } */}
+        {/* /> */}
+        {/* </Routes> */}
+      </div>
+      {/* </Router> */}
     </>
   );
 }
