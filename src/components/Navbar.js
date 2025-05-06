@@ -1,15 +1,15 @@
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
-
+// import { Link } from "react-router-dom";
+//( if you want to use the router than remove the comments from the above code and also cnovert a => link and href => to and do this with all tages where a or href is written.)
 export default function Navbar(props) {
   return (
     <nav
       className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}
     >
       <div className="container-fluid">
-        <Link className="navbar-brand" to="/">
+        <a className="navbar-brand" to="#">
           {props.title}
-        </Link>
+        </a>
         <button
           className="navbar-toggler"
           type="button"
@@ -24,17 +24,14 @@ export default function Navbar(props) {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="/">
+              <a className="nav-link" aria-current="page" href="#">
                 Home
-              </Link>
+              </a>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/about">
+              <a className="nav-link" href="#">
                 {props.aboutText}
-              </Link>
-              {/* <a className="nav-link" href="/about">
-                {props.aboutText}
-              </a> */}
+              </a>
             </li>
           </ul>
           <div

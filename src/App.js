@@ -6,7 +6,7 @@ import TextForm from "./components/Textform";
 import Alert from "./components/Alert";
 // import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 function App() {
-  const [mode, setMode] = useState("light"); // whether dark mode is enabled or not
+  const [mode, setMode] = useState("light");
   const [alert, setAlert] = useState(null);
 
   const showAlert = (message, type) => {
@@ -42,9 +42,9 @@ function App() {
         toggleMode={toggleMode}
       />
       <Alert alert={alert} />
-      <About mode={mode} />
 
       <div className="container my-3">
+        {/* if you want to run the router to enable the about than remove the all comments to upper code and below code and also do into the textform.js . */}
         {/* <Routes> */}
         {/* <Route exact path="/about" element={<About mode={mode} />} /> */}
         {/* <Route
